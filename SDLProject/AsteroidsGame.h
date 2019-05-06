@@ -4,6 +4,7 @@
 
 #include "Bullets.h"
 #include "Fighter.h"
+#include "NetworkMessenger.h"
 #include "SDLGame.h"
 #include "GameObject.h"
 
@@ -31,4 +32,5 @@ private:
 
 	Bullets bulletsShooter_;
 	Fighter fighter0_;
+	NetworkMessenger networkMessenger_;
 };

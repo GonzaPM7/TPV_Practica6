@@ -5,7 +5,7 @@ using namespace std;
 
 AsteroidsGame::AsteroidsGame() :
 		SDLGame("Asteroids", _WINDOW_WIDTH_, _WINDOW_HEIGHT_), bulletsShooter_(
-				this), fighter0_(msg::Fighter_0,this) {
+				this), fighter0_(msg::Fighter_0,this),  networkMessenger_(this) {
 	initGame();
 }
 
@@ -17,6 +17,7 @@ void AsteroidsGame::initGame() {
 
 	addObserver(&bulletsShooter_);
 	addObserver(&fighter0_);
+	addObserver(&networkMessenger_);
 
 	actors_.push_back(&fighter0_);
 	actors_.push_back(&bulletsShooter_);
@@ -31,6 +32,7 @@ void AsteroidsGame::start() {
 	while (!exit_) {
 		Uint32 startTime = SDL_GetTicks();
 
+		networkMessenger_.update();
 		handleInput(startTime);
 		update(startTime);
 		render(startTime);
