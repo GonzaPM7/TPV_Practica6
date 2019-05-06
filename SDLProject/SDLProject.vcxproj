@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{553C665E-1092-4B93-A092-AFFFA06753F0}</ProjectGuid>
+    <RootNamespace>SDLProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SDLProject.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SDLProject.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SDLProject.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\SDLProject.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AsteroidsGame.h" />
+    <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="BoundingBoxGC.h" />
+    <ClInclude Include="BroadCastObjectInfoPC.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Bullets.h" />
+    <ClInclude Include="checkML.h" />
+    <ClInclude Include="ClientInfo.h" />
+    <ClInclude Include="Collisions.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="DeactivateOnBorderExit.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="FontsManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectPool.h" />
+    <ClInclude Include="GraphicsComponent.h" />
+    <ClInclude Include="GunIC.h" />
+    <ClInclude Include="ImageGC.h" />
+    <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Messages_decl.h" />
+    <ClInclude Include="Messages_defs.h" />
+    <ClInclude Include="NaturalMovePC.h" />
+    <ClInclude Include="NetworkMessenger.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="PhysicsComponent.h" />
+    <ClInclude Include="RandomNumberGenerator.h" />
+    <ClInclude Include="ReduceSpeedPC.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Resources.h" />
+    <ClInclude Include="RotatingPC.h" />
+    <ClInclude Include="RotationIC.h" />
+    <ClInclude Include="SDLAudioManager.h" />
+    <ClInclude Include="SDLFontsManager.h" />
+    <ClInclude Include="SDLGame.h" />
+    <ClInclude Include="SDLTexturesManager.h" />
+    <ClInclude Include="sdl_includes.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="ServerConnection.h" />
+    <ClInclude Include="ServiceLocator.h" />
+    <ClInclude Include="ShowUpAtOppositeSidePC.h" />
+    <ClInclude Include="SRandBasedGenerator.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TexturesManager.h" />
+    <ClInclude Include="ThrustIC.h" />
+    <ClInclude Include="Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SDLProject.props" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AsteroidsGame.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="BoundingBoxGC.cpp" />
+    <ClCompile Include="BroadCastObjectInfoPC.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Bullets.cpp" />
+    <ClCompile Include="ClientInfo.cpp" />
+    <ClCompile Include="Collisions.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="DeactivateOnBorderExit.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="FontsManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectPool.cpp" />
+    <ClCompile Include="GraphicsComponent.cpp" />
+    <ClCompile Include="GunIC.cpp" />
+    <ClCompile Include="ImageGC.cpp" />
+    <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NaturalMovePC.cpp" />
+    <ClCompile Include="NetworkMessenger.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="PhysicsComponent.cpp" />
+    <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="ReduceSpeedPC.cpp" />
+    <ClCompile Include="Resources.cpp" />
+    <ClCompile Include="RotatingPC.cpp" />
+    <ClCompile Include="RotationIC.cpp" />
+    <ClCompile Include="SDLAudioManager.cpp" />
+    <ClCompile Include="SDLFontsManager.cpp" />
+    <ClCompile Include="SDLGame.cpp" />
+    <ClCompile Include="SDLTexturesManager.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ServerConnection.cpp" />
+    <ClCompile Include="ServiceLocator.cpp" />
+    <ClCompile Include="ShowUpAtOppositeSidePC.cpp" />
+    <ClCompile Include="SRandBasedGenerator.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TexturesManager.cpp" />
+    <ClCompile Include="ThrustIC.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
