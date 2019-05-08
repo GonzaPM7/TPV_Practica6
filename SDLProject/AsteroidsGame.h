@@ -7,6 +7,7 @@
 #include "NetworkMessenger.h"
 #include "SDLGame.h"
 #include "GameObject.h"
+#include "GameManager.h"
 
 class AsteroidsGame: public SDLGame {
 
@@ -32,5 +33,7 @@ private:
 
 	Bullets bulletsShooter_;
 	Fighter fighter0_;
+	Fighter fighter1_;
 	NetworkMessenger networkMessenger_;
+	GameManager gameManager_;
 };

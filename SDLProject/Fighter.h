@@ -8,6 +8,7 @@
 #include "RotationIC.h"
 #include "ShowUpAtOppositeSidePC.h"
 #include "ThrustIC.h"
+#include "BroadCastObjectInfoPC.h"
 
 /*
  *
@@ -28,5 +29,7 @@ private:
 	GunIC normalGun_;
 	ThrustIC thrust_;
 	ReduceSpeedPC reduceSpeed_;
+	BroadCastObjectInfoPC broadcastInfoPC_;
+
 };
 

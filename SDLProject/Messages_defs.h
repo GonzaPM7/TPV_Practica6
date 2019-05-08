@@ -64,4 +64,5 @@ struct RemoteObjectInfo: public Message {
 	double velY_;
 	double rotation_;
 };
+
 };

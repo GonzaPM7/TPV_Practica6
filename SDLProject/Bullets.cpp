@@ -8,9 +8,9 @@ Bullets::Bullets(SDLGame* game) :
 		b->addC(&naturalMove_);
 		b->addC(&deactivate_);
 		b->addC(&bulletImage_);
-
 	}
 
+	setActive(false);
 }
 
 Bullets::~Bullets() {
@@ -34,7 +34,17 @@ void Bullets::receive(const void* senderObj, const msg::Message& msg) {
 	Container::receive(senderObj, msg);
 
 	switch ( msg.type_) {
-
+	case msg::GAME_START:
+		setActive(true);
+		break;
+	case msg::STOP_GAME:
+		setActive(false);
+		deactiveAllObjects();
+		break;
+	case msg::GAME_OVER:
+		setActive(false);
+		deactiveAllObjects();
+		break;
 	case msg::FIGHTER_SHOOT: {
 		const msg::Shoot& m = static_cast<const msg::Shoot&>(msg);
 		shoot(Vector2D(m.posX_,m.posY_),Vector2D(m.dirX_,m.dirY_)*5,1,5);
