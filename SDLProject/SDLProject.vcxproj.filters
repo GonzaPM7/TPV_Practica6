@@ -168,6 +168,9 @@
     <ClInclude Include="GameCtrlIC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BulletsFighterCollision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\SDLProject.props" />
@@ -313,6 +316,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameStatusViewGC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletsFighterCollision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

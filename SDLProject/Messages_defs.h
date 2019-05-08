@@ -65,4 +65,29 @@ struct RemoteObjectInfo: public Message {
 	double rotation_;
 };
 
+struct FighterInfo : public msg::Message {
+	FighterInfo(msg::ObjectId sender, msg::ObjectId destination,
+		GameObject *fighter)
+		: Message(msg::FIGHTER_INFO, sender, destination), fighter_(fighter) {}
+
+	GameObject *fighter_;
+};
+
+struct BulletsInfoMsg : public msg::Message {
+	BulletsInfoMsg(msg::ObjectId sender, msg::ObjectId destination,
+		const std::vector<Bullet *> *bullets)
+		: Message(msg::BULLETS_INFO, sender, destination), bullets_(bullets) {}
+	const std::vector<Bullet *> *bullets_;
+};
+
+struct FighterBulletCollisionMsg : public msg::Message {
+	FighterBulletCollisionMsg(msg::ObjectId sender, msg::ObjectId destination,
+		GameObject *fighter, Bullet* bullet)
+		: Message(msg::FIGHTER_BULLET_COLLISION, sender, destination),
+		fighter_(fighter), bullet_(bullet) {}
+
+	GameObject *fighter_;
+	Bullet *bullet_;
+};
+
 };

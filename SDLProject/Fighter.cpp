@@ -6,7 +6,7 @@ Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		Container(game), //
 		fighterImage_(game->getServiceLocator()->getTextures()->getTexture(
 						Resources::Airplanes), { 47, 90, 207, 250 }), normalGun_(
-				SDLK_SPACE), broadcastInfoPC_() {
+				SDLK_SPACE), broadcastInfoPC_(), bulletsFighterCollision_() {
 
 	setWidth(40);
 	setHeight(50);
@@ -24,6 +24,7 @@ Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		addC(&thrust_);
 		addC(&reduceSpeed_);
 		addC(&broadcastInfoPC_);
+		addC(&bulletsFighterCollision_);
 	}
 
 	initFighter();
@@ -38,6 +39,8 @@ void Fighter::receive(const void* senderObj, const msg::Message& msg) {
 	switch (msg.type_) {
 	case msg::GAME_START:
 		setActive(true);
+		if ((ClientInfo::instance()->getClientId() == 0))
+			globalSend(this, msg::FighterInfo(msg::Fighter_0, msg::Broadcast, this));
 		break;
 	case msg::STOP_GAME:
 		setActive(false);

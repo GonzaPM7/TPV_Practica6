@@ -9,6 +9,7 @@
 #include "ShowUpAtOppositeSidePC.h"
 #include "ThrustIC.h"
 #include "BroadCastObjectInfoPC.h"
+#include "BulletsFighterCollision.h"
 
 /*
  *
@@ -30,6 +31,8 @@ private:
 	ThrustIC thrust_;
 	ReduceSpeedPC reduceSpeed_;
 	BroadCastObjectInfoPC broadcastInfoPC_;
+	BulletsFighterCollision bulletsFighterCollision_;
+
 
 };
 

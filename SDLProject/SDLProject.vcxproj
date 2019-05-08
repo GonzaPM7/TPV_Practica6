@@ -125,6 +125,7 @@
     <ClInclude Include="BroadCastObjectInfoPC.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Bullets.h" />
+    <ClInclude Include="BulletsFighterCollision.h" />
     <ClInclude Include="checkML.h" />
     <ClInclude Include="ClientInfo.h" />
     <ClInclude Include="Collisions.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="BroadCastObjectInfoPC.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Bullets.cpp" />
+    <ClCompile Include="BulletsFighterCollision.cpp" />
     <ClCompile Include="ClientInfo.cpp" />
     <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="Component.cpp" />
