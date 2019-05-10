@@ -32,7 +32,5 @@ private:
 	ReduceSpeedPC reduceSpeed_;
 	BroadCastObjectInfoPC broadcastInfoPC_;
 	BulletsFighterCollision bulletsFighterCollision_;
-
-
 };
 

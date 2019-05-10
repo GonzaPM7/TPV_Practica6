@@ -2,6 +2,7 @@
 #include "Messages_defs.h"
 #include "ClientInfo.h"
 
+
 Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		Container(game), //
 		fighterImage_(game->getServiceLocator()->getTextures()->getTexture(
@@ -24,6 +25,10 @@ Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		addC(&thrust_);
 		addC(&reduceSpeed_);
 		addC(&broadcastInfoPC_);
+	}
+
+	if ((ClientInfo::instance()->getClientId() == 0 && getId() == msg::Fighter_0))
+	{
 		addC(&bulletsFighterCollision_);
 	}
 
