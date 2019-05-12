@@ -3,6 +3,7 @@
 #include "Container.h"
 #include "GameCtrlIC.h"
 #include "GameStatusViewGC.h"
+#include "BulletsFighterCollision.h"
 
 /*
  *
@@ -27,10 +28,13 @@ private:
 	void handleGameIsReady(const msg::Message& msg);
 	void handleStartGameRequest(const msg::Message& msg);
 	void handleGameStart(const msg::Message& msg);
+	void handleFighterBulletCollision0(const msg::Message& msg);
+	void handleFighterBulletCollision1(const msg::Message& msg);
 
 	GameStatusViewGC gameStatusGC_;
 	GameCtrlIC gameCtrl_;
 	GameStatus status_;
+	BulletsFighterCollision bulletsFighterCollision_;
 	const static int NUM_OF_PLAYERS_ = 2;
 	int numOfConnectPlayers_;
 	bool playersStatus[NUM_OF_PLAYERS_];

@@ -7,7 +7,7 @@ Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		Container(game), //
 		fighterImage_(game->getServiceLocator()->getTextures()->getTexture(
 						Resources::Airplanes), { 47, 90, 207, 250 }), normalGun_(
-				SDLK_SPACE), broadcastInfoPC_(), bulletsFighterCollision_() {
+				SDLK_SPACE), broadcastInfoPC_() {
 
 	setWidth(40);
 	setHeight(50);
@@ -25,11 +25,6 @@ Fighter::Fighter(msg::ObjectId id, SDLGame* game) :
 		addC(&thrust_);
 		addC(&reduceSpeed_);
 		addC(&broadcastInfoPC_);
-	}
-
-	if ((ClientInfo::instance()->getClientId() == 0 && getId() == msg::Fighter_0))
-	{
-		addC(&bulletsFighterCollision_);
 	}
 
 	initFighter();
