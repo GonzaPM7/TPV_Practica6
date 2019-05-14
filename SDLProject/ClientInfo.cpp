@@ -4,7 +4,7 @@
 
 std::unique_ptr<ClientInfo> ClientInfo::instance_;
 
-ClientInfo::ClientInfo(char* host, int port) {
+ClientInfo::ClientInfo(char* host, int port, string clientName) {
 
 	conn_.connect(host, port);
 	msg::Message* m = conn_.recvMessage();
@@ -15,6 +15,7 @@ ClientInfo::ClientInfo(char* host, int port) {
 	}
 
 	clientId_ = m->clientId_;
+	clientName_ = clientName;
 }
 
 ClientInfo::~ClientInfo() {

@@ -6,6 +6,11 @@
 using namespace std;
 
 void clientMode(char* host, int port) {
+	cout << "Write client's name: ";
+	string clientName;
+	do
+		cin >> clientName;
+	while (clientName.length > 10);
 	ClientInfo::initInstance(host, port);
 	AsteroidsGame g;
 	g.start();

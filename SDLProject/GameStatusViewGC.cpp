@@ -27,16 +27,16 @@ void GameStatusViewGC::render(Container *c, Uint32 time) {
     if (gm->getWinner() != -1) {
       string winner;
       if (gm->getWinner() == 0)
-        winner = "Fighter 0";
+        winner = "Fighter 0 wins";
       else
-        winner = "Fighter 1";
+        winner = "Fighter 1 wins";
       Texture w(gm->getGame()->getRenderer(), winner,
                 *(gm->getGame()->getServiceLocator()->getFonts()->getFont(
                     Resources::ARIAL24)),
                 {COLOR(0xff0000ff)});
       w.render(gm->getGame()->getRenderer(),
-               gm->getGame()->getWindowWidth() / 2,
-               gm->getGame()->getWindowHeight() / 2);
+               gm->getGame()->getWindowWidth() / 2 - w.getWidth() / 2,
+               gm->getGame()->getWindowHeight() / 2 - w.getHeight() - 100);
     }
 
     Texture t(gm->getGame()->getRenderer(), msg,

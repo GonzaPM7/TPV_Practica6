@@ -9,12 +9,12 @@
  */
 class ClientInfo {
 public:
-	ClientInfo(char* host, int port);
+	ClientInfo(char* host, int port, string clientName);
 	virtual ~ClientInfo();
 
-	static inline void initInstance(char* host, int port) {
+	static inline void initInstance(char* host, int port, string clientName) {
 		if (instance_.get() == nullptr) {
-			instance_.reset(new ClientInfo(host, port));
+			instance_.reset(new ClientInfo(host, port, clientName));
 		}
 	}
 
@@ -38,10 +38,15 @@ public:
 		return clientId == 0;
 	}
 
+	inline string getClientName() {
+		return clientName_;
+	}
+
 private:
 	static std::unique_ptr<ClientInfo> instance_;
 	ServerConnection conn_;
 	Uint8 clientId_;
+	string clientName_;
 };
 
 
